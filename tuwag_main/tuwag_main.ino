@@ -52,7 +52,10 @@ void loop() {
 
   // Start MacMini when its later than startHour/startMin and it was not already started
   if (now.hour()==startHour & now.minute()>=startMin & now.minute()<startMin+2 & !startedToday){
-    startMac();
+    // never boot on sundays
+    if (now.dayOfTheWeek()!=0){
+      startMac();
+    }
   }
   
   delay(2000);
