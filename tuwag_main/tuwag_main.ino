@@ -2,6 +2,8 @@
  * Created by Rentouch GmbH 2019
  */
 
+/*Needs: https://github.com/adafruit/RTClib */
+
 #include "RTClib.h"
 RTC_DS3231 rtc;
 
